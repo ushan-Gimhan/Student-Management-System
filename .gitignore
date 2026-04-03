@@ -34,3 +34,4 @@ build/
 
 # Ignore actual credentials
 application.properties
+application-test.properties
