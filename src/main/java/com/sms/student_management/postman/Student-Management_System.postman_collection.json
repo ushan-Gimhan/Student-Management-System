@@ -1,0 +1,107 @@
+{
+  "info": {
+    "_postman_id": "ce7de7b0-9b77-43c5-a848-71e31b8cef15",
+    "name": "Student-Management_System",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "44983960",
+    "_collection_link": "https://go.postman.co/collection/44983960-ce7de7b0-9b77-43c5-a848-71e31b8cef15?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Add Student",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"name\": \"Ushan\",\r\n  \"email\": \"ushan@gmail.com\",\r\n  \"course\": \"IT\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/students",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "students"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get All Student",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "Get Student By Id",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "Update Student",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"name\": \"Ushan Updated\",\r\n  \"email\": \"ushan123@gmail.com\",\r\n  \"course\": \"SE\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/students/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "students",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete Student",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/students/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "students",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
