@@ -80,3 +80,4 @@ public class StudentServiceImpl implements StudentService {
         log.info("Student deleted with ID: {}", id);
     }
 }
+
