@@ -1,6 +1,7 @@
 package com.sms.student_management.mapper;
 
 import com.sms.student_management.dto.StudentDTO;
+import com.sms.student_management.dto.StudentResponseDTO;
 import com.sms.student_management.entity.Student;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
@@ -21,5 +22,8 @@ public class StudentMapper {
 
     public StudentDTO toDTO(Student entity) {
         return modelMapper.map(entity, StudentDTO.class);
+    }
+    public StudentResponseDTO toResponseDTO(Student entity) {
+        return modelMapper.map(entity, StudentResponseDTO.class);
     }
 }
