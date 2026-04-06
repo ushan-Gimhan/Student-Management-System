@@ -25,6 +25,6 @@ public class Student {
     private String course;
 
     @Column(name = "profile_img_url")
-    private String ProfileImageUrl;
+    private String profileImageUrl;
 
 }
