@@ -2589,3 +2589,182 @@ org.springframework.web.multipart.MultipartException: Current request is not a m
         profile_img_url=? 
     where
         id=?
+2026-04-06T15:45:42.412+05:30 DEBUG 10912 --- [student-management] [http-nio-8080-exec-10] org.hibernate.SQL                        : 
+    select
+        s1_0.id,
+        s1_0.course,
+        s1_0.email,
+        s1_0.name,
+        s1_0.profile_img_url 
+    from
+        student s1_0 
+    where
+        s1_0.id=?
+2026-04-06T15:46:00.592+05:30 DEBUG 10912 --- [student-management] [http-nio-8080-exec-10] org.hibernate.SQL                        : 
+    update
+        student 
+    set
+        course=?,
+        email=?,
+        name=?,
+        profile_img_url=? 
+    where
+        id=?
+2026-04-06T15:55:17.984+05:30  INFO 10912 --- [student-management] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-04-06T15:55:20.013+05:30  INFO 10912 --- [student-management] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-04-06T15:55:25.149+05:30  INFO 10912 --- [student-management] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-04-06T15:55:29.592+05:30  INFO 10912 --- [student-management] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-04-06T15:55:31.842+05:30  INFO 10912 --- [student-management] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-04-06T16:20:44.144+05:30  INFO 12332 --- [student-management] [main] c.s.s.StudentManagementApplication       : Starting StudentManagementApplication using Java 21.0.6 with PID 12332 (D:\Company(Novo Soft)\student-management-system\target\classes started by ushan in D:\Company(Novo Soft)\student-management-system)
+2026-04-06T16:20:44.199+05:30  INFO 12332 --- [student-management] [main] c.s.s.StudentManagementApplication       : No active profile set, falling back to 1 default profile: "default"
+2026-04-06T16:20:51.110+05:30  INFO 12332 --- [student-management] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-06T16:20:52.086+05:30  INFO 12332 --- [student-management] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 936 ms. Found 1 JPA repository interface.
+2026-04-06T16:20:53.650+05:30  INFO 12332 --- [student-management] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-04-06T16:20:53.701+05:30  INFO 12332 --- [student-management] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-06T16:20:53.702+05:30  INFO 12332 --- [student-management] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.20]
+2026-04-06T16:20:53.979+05:30  INFO 12332 --- [student-management] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 9665 ms
+2026-04-06T16:20:54.471+05:30  INFO 12332 --- [student-management] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-04-06T16:20:54.674+05:30  INFO 12332 --- [student-management] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.7.Final
+2026-04-06T16:20:56.454+05:30  INFO 12332 --- [student-management] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-06T16:20:56.573+05:30  INFO 12332 --- [student-management] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-04-06T16:20:57.761+05:30  INFO 12332 --- [student-management] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@47c5cbf2
+2026-04-06T16:20:57.765+05:30  INFO 12332 --- [student-management] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-04-06T16:20:58.255+05:30  WARN 12332 --- [student-management] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-04-06T16:20:58.305+05:30  INFO 12332 --- [student-management] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/student_db?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.39
+	Default catalog/schema: student_db/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-04-06T16:21:00.924+05:30  INFO 12332 --- [student-management] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-04-06T16:21:01.592+05:30  INFO 12332 --- [student-management] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-06T16:21:01.808+05:30  INFO 12332 --- [student-management] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-04-06T16:21:02.744+05:30  WARN 12332 --- [student-management] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-04-06T16:21:03.517+05:30  INFO 12332 --- [student-management] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-04-06T16:21:03.529+05:30  INFO 12332 --- [student-management] [main] c.s.s.StudentManagementApplication       : Started StudentManagementApplication in 20.708 seconds (process running for 23.138)
+2026-04-06T16:21:53.976+05:30  INFO 12332 --- [student-management] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-06T16:21:53.978+05:30  INFO 12332 --- [student-management] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-04-06T16:21:53.984+05:30  INFO 12332 --- [student-management] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2026-04-06T16:21:54.410+05:30  INFO 12332 --- [student-management] [http-nio-8080-exec-2] c.s.s.service.Impl.StudentServiceImpl    : Update student Profile Image with ID: 5
+2026-04-06T16:21:54.554+05:30 DEBUG 12332 --- [student-management] [http-nio-8080-exec-2] org.hibernate.SQL                        : 
+    select
+        s1_0.id,
+        s1_0.course,
+        s1_0.email,
+        s1_0.name,
+        s1_0.profile_img_url 
+    from
+        student s1_0 
+    where
+        s1_0.id=?
+2026-04-06T16:22:15.350+05:30 DEBUG 12332 --- [student-management] [http-nio-8080-exec-2] org.hibernate.SQL                        : 
+    update
+        student 
+    set
+        course=?,
+        email=?,
+        name=?,
+        profile_img_url=? 
+    where
+        id=?
+2026-04-06T16:22:15.802+05:30  INFO 12332 --- [student-management] [http-nio-8080-exec-2] c.s.s.service.Impl.StudentServiceImpl    : Student Profile Image Updated with ID: 5
+2026-04-06T16:22:55.993+05:30  INFO 12332 --- [student-management] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-04-06T16:22:56.011+05:30  INFO 12332 --- [student-management] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-04-06T16:22:56.019+05:30  INFO 12332 --- [student-management] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-04-06T16:22:56.024+05:30  INFO 12332 --- [student-management] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-04-06T16:22:56.040+05:30  INFO 12332 --- [student-management] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-04-06T16:39:33.937+05:30  INFO 4212 --- [student-management] [main] c.s.s.StudentManagementApplication       : Starting StudentManagementApplication using Java 21.0.6 with PID 4212 (D:\Company(Novo Soft)\student-management-system\target\classes started by ushan in D:\Company(Novo Soft)\student-management-system)
+2026-04-06T16:39:33.969+05:30  INFO 4212 --- [student-management] [main] c.s.s.StudentManagementApplication       : No active profile set, falling back to 1 default profile: "default"
+2026-04-06T16:39:36.939+05:30  INFO 4212 --- [student-management] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-06T16:39:37.888+05:30  INFO 4212 --- [student-management] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 907 ms. Found 1 JPA repository interface.
+2026-04-06T16:39:39.697+05:30  INFO 4212 --- [student-management] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-04-06T16:39:39.739+05:30  INFO 4212 --- [student-management] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-06T16:39:39.740+05:30  INFO 4212 --- [student-management] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.20]
+2026-04-06T16:39:39.981+05:30  INFO 4212 --- [student-management] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 5801 ms
+2026-04-06T16:39:40.672+05:30  INFO 4212 --- [student-management] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-04-06T16:39:40.923+05:30  INFO 4212 --- [student-management] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.7.Final
+2026-04-06T16:39:42.841+05:30  INFO 4212 --- [student-management] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-06T16:39:42.976+05:30  INFO 4212 --- [student-management] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-04-06T16:39:46.412+05:30  INFO 4212 --- [student-management] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4ae958b0
+2026-04-06T16:39:46.418+05:30  INFO 4212 --- [student-management] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-04-06T16:39:47.034+05:30  WARN 4212 --- [student-management] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-04-06T16:39:47.103+05:30  INFO 4212 --- [student-management] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/student_db?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.39
+	Default catalog/schema: student_db/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-04-06T16:39:50.376+05:30  INFO 4212 --- [student-management] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-04-06T16:39:51.408+05:30  INFO 4212 --- [student-management] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-06T16:39:51.844+05:30  INFO 4212 --- [student-management] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-04-06T16:39:53.278+05:30  WARN 4212 --- [student-management] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-04-06T16:39:54.390+05:30  INFO 4212 --- [student-management] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-04-06T16:39:54.409+05:30  INFO 4212 --- [student-management] [main] c.s.s.StudentManagementApplication       : Started StudentManagementApplication in 22.525 seconds (process running for 26.58)
+2026-04-06T16:40:30.994+05:30  INFO 4212 --- [student-management] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-06T16:40:30.995+05:30  INFO 4212 --- [student-management] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-04-06T16:40:31.001+05:30  INFO 4212 --- [student-management] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2026-04-06T16:40:31.075+05:30  WARN 4212 --- [student-management] [http-nio-8080-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type is not supported]
+2026-04-06T16:40:48.037+05:30  WARN 4212 --- [student-management] [http-nio-8080-exec-3] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type is not supported]
+2026-04-06T16:40:54.239+05:30  INFO 4212 --- [student-management] [http-nio-8080-exec-4] c.s.s.service.Impl.StudentServiceImpl    : Delete student Profile Image with ID: 5
+2026-04-06T16:40:54.459+05:30 DEBUG 4212 --- [student-management] [http-nio-8080-exec-4] org.hibernate.SQL                        : 
+    select
+        s1_0.id,
+        s1_0.course,
+        s1_0.email,
+        s1_0.name,
+        s1_0.profile_img_url 
+    from
+        student s1_0 
+    where
+        s1_0.id=?
+2026-04-06T16:41:01.608+05:30 DEBUG 4212 --- [student-management] [http-nio-8080-exec-4] org.hibernate.SQL                        : 
+    update
+        student 
+    set
+        course=?,
+        email=?,
+        name=?,
+        profile_img_url=? 
+    where
+        id=?
+2026-04-06T16:41:25.776+05:30  WARN 4212 --- [student-management] [http-nio-8080-exec-5] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type is not supported]
+2026-04-06T16:41:58.634+05:30  INFO 4212 --- [student-management] [http-nio-8080-exec-6] c.s.s.service.Impl.StudentServiceImpl    : Update student Profile Image with ID: 5
+2026-04-06T16:41:58.639+05:30 DEBUG 4212 --- [student-management] [http-nio-8080-exec-6] org.hibernate.SQL                        : 
+    select
+        s1_0.id,
+        s1_0.course,
+        s1_0.email,
+        s1_0.name,
+        s1_0.profile_img_url 
+    from
+        student s1_0 
+    where
+        s1_0.id=?
+2026-04-06T16:42:08.433+05:30 DEBUG 4212 --- [student-management] [http-nio-8080-exec-6] org.hibernate.SQL                        : 
+    update
+        student 
+    set
+        course=?,
+        email=?,
+        name=?,
+        profile_img_url=? 
+    where
+        id=?
+2026-04-06T16:42:08.631+05:30  INFO 4212 --- [student-management] [http-nio-8080-exec-6] c.s.s.service.Impl.StudentServiceImpl    : Student Profile Image Updated with ID: 5
+2026-04-06T17:03:41.771+05:30  INFO 4212 --- [student-management] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-04-06T17:03:42.079+05:30  INFO 4212 --- [student-management] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-04-06T17:03:42.721+05:30  INFO 4212 --- [student-management] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-04-06T17:03:43.041+05:30  INFO 4212 --- [student-management] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-04-06T17:03:43.203+05:30  INFO 4212 --- [student-management] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
