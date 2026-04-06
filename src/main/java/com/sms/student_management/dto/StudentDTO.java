@@ -12,4 +12,6 @@ public class StudentDTO {
     private String name;
     private String email;
     private String course;
+
+    private String profileImageUrl;
 }

@@ -9,6 +9,10 @@ import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
+
+import java.util.Map;
+
 
 @RestController
 @RequestMapping("/api/students")
@@ -62,5 +66,38 @@ public class StudentController {
         studentService.deleteStudent(id);
         log.info("Student deleted with ID: {}", id);
         return ResponseEntity.noContent().build();
+    }
+
+    @PatchMapping(value = "/{id}/profile-image", consumes = "multipart/form-data")
+    public ResponseEntity<Map<String, String>> uploadProfileImage(
+            @PathVariable Long id,
+            @RequestParam("file") MultipartFile file) {
+
+        if (file == null || file.isEmpty()) {
+            return ResponseEntity.badRequest().body(Map.of(
+                    "status", "error",
+                    "message", "No file provided"
+            ));
+        }
+
+        String imageUrl = studentService.updateProfileImage(id, file);
+
+        return ResponseEntity.ok(Map.of(
+                "status", "success",
+                "message", "Profile image uploaded successfully",
+                "url", imageUrl
+        ));
+    }
+
+    @DeleteMapping("/{id}/profile-image")
+    public ResponseEntity<Map<String, String>> deleteProfileImage(@PathVariable Long id) {
+        // Call the business logic service
+        studentService.deleteProfileImage(id);
+
+        // Return a clean response
+        return ResponseEntity.ok(Map.of(
+                "status", "success",
+                "message", "Profile image deleted successfully"
+        ));
     }
 }
