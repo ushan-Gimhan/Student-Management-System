@@ -1,9 +1,6 @@
 package com.sms.student_management.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import lombok.Data;
@@ -26,5 +23,8 @@ public class Student {
 
     @NotBlank(message = "Course is required")
     private String course;
+
+    @Column(name = "profile_img_url")
+    private String ProfileImageUrl;
 
 }
