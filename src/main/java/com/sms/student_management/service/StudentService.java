@@ -2,7 +2,9 @@ package com.sms.student_management.service;
 
 import com.sms.student_management.dto.StudentDTO;
 import com.sms.student_management.dto.StudentResponseDTO;
+import org.apache.tomcat.util.http.fileupload.FileUploadException;
 import org.springframework.data.domain.Page;
+import org.springframework.web.multipart.MultipartFile;
 
 public interface StudentService {
 
@@ -20,4 +22,10 @@ public interface StudentService {
 
     // Delete a student by ID
     void deleteStudent(Long id);
+
+    //add profile pic
+    String updateProfileImage(Long id, MultipartFile file);
+
+    //deleter profile pic
+    void deleteProfileImage(Long id);
 }
