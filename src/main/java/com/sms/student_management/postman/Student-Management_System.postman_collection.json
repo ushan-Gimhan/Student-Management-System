@@ -102,6 +102,47 @@
         }
       },
       "response": []
+    },
+    {
+      "name": "AddImageToStudent",
+      "request": {
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "file",
+              "type": "file",
+              "uuid": "12bacfa3-5d88-474b-8de9-064f0461f3e5",
+              "src": "/C:/Users/ushan/Downloads/MoneyMate.png"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/students/5/profile-image",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "students",
+            "5",
+            "profile-image"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete student image",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
     }
   ]
 }

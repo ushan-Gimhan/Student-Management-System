@@ -2510,3 +2510,82 @@ org.springframework.web.multipart.MultipartException: Current request is not a m
 2026-04-06T15:14:23.654+05:30  INFO 14888 --- [student-management] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2026-04-06T15:14:23.656+05:30  INFO 14888 --- [student-management] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2026-04-06T15:14:23.663+05:30  INFO 14888 --- [student-management] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-04-06T15:14:35.144+05:30  INFO 10912 --- [student-management] [main] c.s.s.StudentManagementApplication       : Starting StudentManagementApplication using Java 21.0.6 with PID 10912 (D:\Company(Novo Soft)\student-management-system\target\classes started by ushan in D:\Company(Novo Soft)\student-management-system)
+2026-04-06T15:14:35.154+05:30  INFO 10912 --- [student-management] [main] c.s.s.StudentManagementApplication       : No active profile set, falling back to 1 default profile: "default"
+2026-04-06T15:14:36.798+05:30  INFO 10912 --- [student-management] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-06T15:14:37.146+05:30  INFO 10912 --- [student-management] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 330 ms. Found 1 JPA repository interface.
+2026-04-06T15:14:38.177+05:30  INFO 10912 --- [student-management] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-04-06T15:14:38.205+05:30  INFO 10912 --- [student-management] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-06T15:14:38.206+05:30  INFO 10912 --- [student-management] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.20]
+2026-04-06T15:14:38.339+05:30  INFO 10912 --- [student-management] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 3064 ms
+2026-04-06T15:14:38.753+05:30  INFO 10912 --- [student-management] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-04-06T15:14:38.867+05:30  INFO 10912 --- [student-management] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.7.Final
+2026-04-06T15:14:39.910+05:30  INFO 10912 --- [student-management] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-06T15:14:40.006+05:30  INFO 10912 --- [student-management] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-04-06T15:14:40.379+05:30  INFO 10912 --- [student-management] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@67b3960b
+2026-04-06T15:14:40.383+05:30  INFO 10912 --- [student-management] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-04-06T15:14:40.533+05:30  WARN 10912 --- [student-management] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-04-06T15:14:40.581+05:30  INFO 10912 --- [student-management] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/student_db?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.39
+	Default catalog/schema: student_db/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-04-06T15:14:42.884+05:30  INFO 10912 --- [student-management] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-04-06T15:14:43.030+05:30  INFO 10912 --- [student-management] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-06T15:14:43.223+05:30  INFO 10912 --- [student-management] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-04-06T15:14:44.033+05:30  WARN 10912 --- [student-management] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-04-06T15:14:44.763+05:30  INFO 10912 --- [student-management] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-04-06T15:14:44.779+05:30  INFO 10912 --- [student-management] [main] c.s.s.StudentManagementApplication       : Started StudentManagementApplication in 10.732 seconds (process running for 12.586)
+2026-04-06T15:15:05.238+05:30  INFO 10912 --- [student-management] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-06T15:15:05.239+05:30  INFO 10912 --- [student-management] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-04-06T15:15:05.245+05:30  INFO 10912 --- [student-management] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2026-04-06T15:15:05.527+05:30  WARN 10912 --- [student-management] [http-nio-8080-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.multipart.support.MissingServletRequestPartException: Required part 'file' is not present.]
+2026-04-06T15:15:42.052+05:30 DEBUG 10912 --- [student-management] [http-nio-8080-exec-4] org.hibernate.SQL                        : 
+    select
+        s1_0.id,
+        s1_0.course,
+        s1_0.email,
+        s1_0.name,
+        s1_0.profile_img_url 
+    from
+        student s1_0 
+    where
+        s1_0.id=?
+2026-04-06T15:15:58.720+05:30 DEBUG 10912 --- [student-management] [http-nio-8080-exec-4] org.hibernate.SQL                        : 
+    update
+        student 
+    set
+        course=?,
+        email=?,
+        name=?,
+        profile_img_url=? 
+    where
+        id=?
+2026-04-06T15:29:52.534+05:30 DEBUG 10912 --- [student-management] [http-nio-8080-exec-6] org.hibernate.SQL                        : 
+    select
+        s1_0.id,
+        s1_0.course,
+        s1_0.email,
+        s1_0.name,
+        s1_0.profile_img_url 
+    from
+        student s1_0 
+    where
+        s1_0.id=?
+2026-04-06T15:29:57.695+05:30 DEBUG 10912 --- [student-management] [http-nio-8080-exec-6] org.hibernate.SQL                        : 
+    update
+        student 
+    set
+        course=?,
+        email=?,
+        name=?,
+        profile_img_url=? 
+    where
+        id=?
