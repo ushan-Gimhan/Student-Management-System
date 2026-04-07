@@ -1,8 +1,6 @@
 package com.sms.student_management.service;
 
 import com.sms.student_management.dto.StudentDTO;
-import com.sms.student_management.dto.StudentResponseDTO;
-import org.apache.tomcat.util.http.fileupload.FileUploadException;
 import org.springframework.data.domain.Page;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -12,7 +10,7 @@ public interface StudentService {
     StudentDTO saveStudent(StudentDTO dto);
 
     // Get all students with pagination
-    Page<StudentResponseDTO> getAllStudents(int page, int size);
+    Page<StudentDTO> getAllStudents(int page, int size);
 
     // Get a single student by ID
     StudentDTO getStudentById(Long id);

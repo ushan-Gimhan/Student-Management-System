@@ -18,6 +18,7 @@ import java.util.Map;
 @RequestMapping("/api/students")
 @RequiredArgsConstructor
 @Slf4j
+@CrossOrigin
 public class StudentController {
 
     private final StudentService studentService;
@@ -27,16 +28,17 @@ public class StudentController {
         log.info("Received request to create student: {}", dto.getName());
         StudentDTO saved = studentService.saveStudent(dto);
         log.info("Student created with ID: {}", saved.getId());
+        System.out.print(saved.getProfileImageUrl());
         return ResponseEntity.status(HttpStatus.CREATED).body(saved);
     }
 
 
     @GetMapping
-    public ResponseEntity<Page<StudentResponseDTO>> getAllStudents(
+    public ResponseEntity<Page<StudentDTO>> getAllStudents(
             @RequestParam(defaultValue = "0") int page,
             @RequestParam(defaultValue = "10") int size) {
         log.info("Received request to fetch students, page: {}, size: {}", page, size);
-        Page<StudentResponseDTO> students = studentService.getAllStudents(page, size);
+        Page<StudentDTO> students = studentService.getAllStudents(page, size);
         log.info("Fetched {} students", students.getNumberOfElements());
         return ResponseEntity.ok(students);
     }

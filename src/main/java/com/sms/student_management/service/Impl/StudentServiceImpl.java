@@ -1,7 +1,6 @@
 package com.sms.student_management.service.Impl;
 
 import com.sms.student_management.dto.StudentDTO;
-import com.sms.student_management.dto.StudentResponseDTO;
 import com.sms.student_management.entity.Student;
 import com.sms.student_management.exception.ResourceNotFoundException;
 import com.sms.student_management.mapper.StudentMapper;
@@ -36,10 +35,10 @@ public class StudentServiceImpl implements StudentService {
     }
 
     @Override
-    public Page<StudentResponseDTO> getAllStudents(int page, int size) {
+    public Page<StudentDTO> getAllStudents(int page, int size) {
         log.info("Fetching all students, page: {}, size: {}", page, size);
-        Page<StudentResponseDTO> students = repository.findAll(PageRequest.of(page, size))
-                .map(mapper::toResponseDTO);
+        Page<StudentDTO> students = repository.findAll(PageRequest.of(page, size))
+                .map(mapper::toDTO);
         log.info("Fetched {} students", students.getNumberOfElements());
         return students;
     }
