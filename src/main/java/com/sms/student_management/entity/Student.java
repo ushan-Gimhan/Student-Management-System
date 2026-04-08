@@ -27,4 +27,6 @@ public class Student {
     @Column(name = "profile_img_url")
     private String profileImageUrl;
 
+    @Column(name = "age")
+    private Integer age;
 }
