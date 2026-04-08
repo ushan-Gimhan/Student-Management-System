@@ -1,5 +1,6 @@
 package com.sms.student_management.service.Impl;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.sms.student_management.dto.StudentDTO;
 import com.sms.student_management.entity.Student;
 import com.sms.student_management.exception.ResourceNotFoundException;
@@ -26,12 +27,37 @@ public class StudentServiceImpl implements StudentService {
     private final SupabaseStorageService storageService;
 
     @Override
-    public StudentDTO saveStudent(StudentDTO dto) {
-        log.info("Saving new student: {}", dto.getName());
-        Student student = mapper.toEntity(dto);
-        Student saved = repository.save(student);
-        log.info("Student saved with ID: {}", saved.getId());
-        return mapper.toDTO(saved);
+    public StudentDTO saveStudent(String studentJson, MultipartFile file) {
+        try {
+            ObjectMapper objectMapper = new ObjectMapper();
+
+            //Convert JSON → DTO
+            StudentDTO dto = objectMapper.readValue(studentJson, StudentDTO.class);
+
+            log.info("Saving new student: {}", dto.getName());
+
+            //Upload file if exists
+            if (file != null && !file.isEmpty()) {
+                String imageUrl = storageService.uploadFile(file);
+                dto.setProfileImageUrl(imageUrl);
+
+                log.info("Image uploaded: {}", imageUrl);
+            } else {
+                log.warn("No image provided, saving without image");
+            }
+
+            //Save student
+            Student student = mapper.toEntity(dto);
+            Student saved = repository.save(student);
+
+            log.info("Student saved with ID: {}", saved.getId());
+
+            return mapper.toDTO(saved);
+
+        } catch (Exception e) {
+            log.error("Error saving student with image", e);
+            throw new RuntimeException("Failed to save student", e);
+        }
     }
 
     @Override

@@ -1,12 +1,11 @@
 package com.sms.student_management.controller;
 
 import com.sms.student_management.dto.StudentDTO;
-import com.sms.student_management.dto.StudentResponseDTO;
 import com.sms.student_management.service.StudentService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Page;
-import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
@@ -23,13 +22,15 @@ public class StudentController {
 
     private final StudentService studentService;
 
-    @PostMapping()
-    public ResponseEntity<StudentDTO> createStudent(@RequestBody StudentDTO dto) {
-        log.info("Received request to create student: {}", dto.getName());
-        StudentDTO saved = studentService.saveStudent(dto);
-        log.info("Student created with ID: {}", saved.getId());
-        System.out.print(saved.getProfileImageUrl());
-        return ResponseEntity.status(HttpStatus.CREATED).body(saved);
+    @PostMapping(consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
+    public ResponseEntity<StudentDTO> addStudent(
+            @RequestPart("student") String studentJson,
+            @RequestPart(value = "file", required = false) MultipartFile file
+    ){
+
+        StudentDTO saved = studentService.saveStudent(studentJson, file);
+
+        return ResponseEntity.ok(saved);
     }
 
 

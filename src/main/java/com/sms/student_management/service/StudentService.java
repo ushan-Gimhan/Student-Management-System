@@ -7,7 +7,7 @@ import org.springframework.web.multipart.MultipartFile;
 public interface StudentService {
 
     // Save a new student
-    StudentDTO saveStudent(StudentDTO dto);
+    StudentDTO saveStudent(String studentJson, MultipartFile file);
 
     // Get all students with pagination
     Page<StudentDTO> getAllStudents(int page, int size);
